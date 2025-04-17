@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+
+{% block title %}Library{% endblock title %}
+
+{% block content %}
+
+    <table id="libraries-table">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>address</th>
+                <th>date_established</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+        $(document).ready(function(){
+            $('#libraries-table').DataTable({
+                'processing': true,
+                'serverSide': true,
+                'ajax': "{% url 'fetch_lib' %}",
+                'columns': [
+                    {'data':'id'},
+                    {'data':'name'},
+                    {'data':'address'},
+                    {'data':'data_established'}
+                ]
+            })
+        });
+    </script>
+{% endblock content %}
