@@ -1,2 +1,4 @@
 # Internship-Tasks
-This repo contains all the taks asssigned to me during my internship.
+# Task #1
+
+<img src="./Task_1_Screenshots/1.png" />
